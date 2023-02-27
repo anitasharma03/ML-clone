@@ -1,6 +1,7 @@
 .main-form {
+    position: absolute;
     display: block;
-    margin-left: 10px;
+    margin-left: 40px;
     margin-top: 10px;
 }
 

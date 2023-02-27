@@ -15,7 +15,7 @@
 
 header {
     background-color: var(--white);
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     top: 0;
@@ -24,7 +24,7 @@ header {
     box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
     -moz-box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
     -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
-    padding: 0 20px;
+    padding: 0px 10px;
 }
 
 
@@ -71,7 +71,7 @@ header .main-nav {
     line-height: 1.5;
 }
 
-header ul, footer ul {
+header ul{
     list-style: none!important;
     margin: 0;
     padding: 0;
@@ -83,23 +83,16 @@ header .main-nav-item {
     position: relative;
 }
 
-header .nav .nav-mob-cta {
-    text-align: center;
-    padding: 35px 10px 30px;
-    flex-grow: 1;
-}
 
-header .nav .nav-mob-cta a {
-    display: inline-block;
-}
-header .main-nav-item>a.header-cta, header .mob-cta {
+header .main-nav-item>a.header-cta{
     border: 2px solid var(--primary-light);
     border-radius: 4px;
     padding: 9px 27px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -107,44 +100,35 @@ a {
     transition: all 0.4s ease;
 }
 
-header .nav .nav-footer {
-    text-align: center;
-    padding: 15px 0 35px;
-}
-header .header-logo .logo {
-    display: block;
-    width: 110px;
-    margin: 0;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-    background-color: transparent;
-    transition: all 0.4s ease;
-}
 
-header .header-logo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-img {
+ #headerLogo{
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-}
-img {
-    height: auto;
-    max-width: 100%;
-}
-img {
     border-style: none;
 }
+
+.droplet{
+    display: none;
+}
+
+.contact:hover  .droplet{
+    display: block;
+}
+
+.header-cta:hover{
+    background-color: #F48245;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.main-nav-item a:hover{
+    color:#000;
+    font-weight: 500;
+} 
+
+
 
 @media (min-width: 992px) {
     header .header-wrap {
@@ -178,15 +162,35 @@ img {
         margin: 19px auto 0 0;
         padding: 0 0 19px;
     }
+
     header .main-nav-item {
         margin: 19px 17px 0;
         padding: 0 0 28px;
     }
-    header .header-logo {
-        padding: 0 0 10px 18px;
+
+    #headerLogo {
+        padding: 0 0 22px 23px;
+    }
+    
+    .droplet {
+        background-color: #fffefe;
+        position: absolute;
+        width: 200px;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        border-radius: 4px;
+        border-top: 1px solid var(--light-gray);
+        box-shadow: 0 15px 20px 0 rgb(0 0 0 / 10%);
     }
 
+    .droplet ul li a {
+        font-size: inherit;
+        padding: 11px 15px;
+        cursor: pointer;
     }
 
-    
-    
+    .droplet ul li{
+        display: flex;
+    }
+}

@@ -1,5 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import './form.css';
+import axios from 'axios';
+
 function FormComponent() {
     const [inputs, setInputs] = useState({});
 
@@ -10,11 +12,14 @@ function FormComponent() {
     }
 
     const handleSubmit = (event) => {
-      event.preventDefault();     
-      fetch('https://demo5216204.mockable.io/formdata',{
-        method: 'POST',
-        body: JSON.stringify(inputs)
-      }).then(() =>{
+      event.preventDefault();    
+      // fetch('https://demo5216204.mockable.io/formdata',{
+      //   method: 'POST',
+      //   body: JSON.stringify(inputs)
+      // })
+      axios.post("https://demo5216204.mockable.io/formdata", JSON.stringify(inputs, null, 2)
+      ) 
+      .then(() =>{
         console.log('Data submitted successfully')
       })
     }
