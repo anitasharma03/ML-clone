@@ -123,11 +123,6 @@ a {
     font-weight: bolder;
 }
 
-.main-nav-item a:hover{
-    color:#000;
-    font-weight: 500;
-} 
-
 
 
 @media (min-width: 992px) {
