@@ -5,36 +5,12 @@ function Header() {
   return (
     <div>
       <header id="header">
-        <div id="header-holder" className="header-wrap">
-          <a href="/" className="header-cta mwc-cta" onclick="scrollMwc()">
-            Speak to an expert
-          </a>
-          {/* <button
-            id="nav-opener-btn"
-            className="nav-opener"
-            aria-label="Open Navigation Menu"
-            aria-expanded="false"
-            onclick="openNav()"
-          >
-            <img
-              className="close-img"
-              alt=""
-              src="/wp-content/uploads/2022/02/hamburger.png"
-              width={23}
-              height={15}
-            />
-            <img
-              className="open-img"
-              alt=""
-              src="/wp-content/uploads/2022/03/Multiply-orange.png"
-              width={23}
-              height={16}
-            />
-          </button> */}
+        <div id="header-holder" className="header-wrap">          
           <nav className="nav">
+  
             <ul id="mega-menu" role="menubar" className="main-nav">
               <li className="main-nav-item">
-                <a href="/contact-us#letsConnect" role="menuitem" className="header-cta">
+                <a href="#letsConnect" role="menuitem" className="header-cta">
                   Speak to an expert
                 </a>
               </li>
@@ -75,12 +51,12 @@ function Header() {
                 <div className="droplet" role="menu">
                   <ul role="list">
                     <li role="listitem">
-                      <a role="menuitem" href="/contact-us#offices">
+                      <a role="menuitem" href="#offices">
                         Locations
                       </a>
                     </li>
                     <li role="listitem">
-                      <a id="lastDropItem" role="menuitem" href="/contact-us#letsConnect">
+                      <a id="lastDropItem" role="menuitem" href="#letsConnect">
                         Form
                       </a>
                     </li>

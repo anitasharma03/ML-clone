@@ -69,6 +69,7 @@ header .main-nav {
     position: relative;
     font-size: 14px;
     line-height: 1.5;
+    width: 100%;
 }
 
 header ul{
@@ -94,14 +95,13 @@ header .main-nav-item>a.header-cta{
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: var(--black1) !important;
     background-color: transparent;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease !important;
 }
 
-
- #headerLogo{
+#headerLogo{
     max-width: 100%;
     height: auto;
     display: block;
@@ -118,9 +118,8 @@ a {
 }
 
 .header-cta:hover{
-    background-color: #F48245;
-    color: #fff;
-    font-weight: bolder;
+    background-color: #F48245 !important;
+    color: #fff !important;
 }
 
 
